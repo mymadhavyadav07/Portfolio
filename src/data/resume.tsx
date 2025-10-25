@@ -5,8 +5,8 @@ export const DATA = {
   name: "Madhav Yadav",
   initials: "MY",
   url: "https://mymadhavyadav07.github.io",
-  location: "Prayagraj, India",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  location: "Delhi, India",
+  locationLink: "https://www.google.com/maps/place/delhi",
   description:
     "Python Backend Developer curious about Computer Vision and Machine Learning. Building tech with purpose. Loves scrolling GitHub.",
   summary:
@@ -89,12 +89,12 @@ export const DATA = {
       href: "https://osintjourno.com",
       badges: [],
       location: "Remote",
-      title: "CTO (Chief Technology Officer)",
+      title: "Open Source Contributor",
       logoUrl: "/osint_journo.png",
       start: "Jan 2025",
       end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Contributing to OSINT JOURNO's open source projects.",
     },
   ],
   education: [
