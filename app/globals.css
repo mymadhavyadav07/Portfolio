@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f4f2ec;
+  --ink: #141310;
+  --muted: #6f6a60;
+  --line: rgba(20, 19, 16, 0.14);
+  --accent: #ff5005;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: rgba(255, 80, 5, 0.22); }
+
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(20, 19, 16, 0.18); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(20, 19, 16, 0.3); }
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-5xl px-6 md:px-8; }
+
+  /* small mono section label, e.g. "01 / About" */
+  .eyebrow {
+    @apply mb-4 inline-flex items-center gap-2 font-mono text-[11px] font-normal
+           uppercase tracking-[0.22em] text-[var(--muted)];
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-[var(--accent)];
+  }
+
+  /* outline-only pill — minimal, no fill */
+  .chip {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-[12.5px] leading-none
+           text-ink/80 transition-colors;
+    border-color: var(--line);
+  }
+  .chip:hover { @apply border-accent/60 text-ink; }
+
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all;
+  }
+  .btn-solid { @apply bg-ink text-paper hover:bg-ink/85; }
+  .btn-outline { @apply border text-ink hover:border-ink; border-color: var(--line); }
+
+  /* underline link with an animated rule */
+  .link-underline {
+    @apply relative inline-flex items-center gap-1.5 text-ink transition-colors;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300;
+  }
+  .link-underline:hover::after { @apply scale-x-100; }
+
+  .hairline { @apply border-t; border-color: var(--line); }
+}
