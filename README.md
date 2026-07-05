@@ -14,7 +14,7 @@
 
 ## About Me
 
-- I'm a Python Backend Developer with a strong foundation in RESTful API Development, SaaS Development, and Application Security.
+- I'm a AI/ML Developer with a strong foundation in RESTful API Development, SaaS Development, and Application Security.
 - I love bringing ideas to life!
 - In the meantime, you’ll find me browsing GitHub projects.
 
