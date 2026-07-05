@@ -1,11 +1,11 @@
-/* Portfolio content — mirrors the source data in ../resume/data/resume.js.
-   Edit here to update the site. */
+/* Portfolio content — mirrors the source data in ../resume/data/resume.js
+   (the file that generates Madhav_Yadav_Resume_ATS.pdf). Edit here to update the site. */
 
 export const profile = {
   name: "Madhav Yadav",
-  role: "Machine Learning Engineer · Software Engineer",
+  role: "AI/ML Intern • SDE Intern",
   tagline:
-    "I build LLM-powered products and clean, reliable systems — from retrieval and agents to the infrastructure that serves them.",
+    "I turn models into real products — LLM tooling, retrieval systems, and full-stack platforms, built to be reliable and fast.",
   location: "Delhi, India",
   email: "mymadhavyadav07@gmail.com",
   links: {
@@ -13,14 +13,13 @@ export const profile = {
     linkedin: { label: "/mymadhavyadav07", url: "https://linkedin.com/in/mymadhavyadav07" },
     github: { label: "/mymadhavyadav07", url: "https://github.com/mymadhavyadav07" },
   },
-  // Résumé link. Set NEXT_PUBLIC_RESUME_URL in .env.local (e.g. a Google Drive
-  // share link) — clicking "Résumé" opens it in a new tab. Falls back to the
-  // local PDF in /public if the env var is not set.
+  // Résumé link — set NEXT_PUBLIC_RESUME_URL in .env.local (e.g. a Google Drive
+  // share link). Falls back to the local PDF in /public if the env var is unset.
   resumeUrl: process.env.NEXT_PUBLIC_RESUME_URL || "/Madhav_Yadav_Resume.pdf",
 };
 
 export const about =
-  "I'm a Machine Learning & Software Engineer focused on turning fuzzy, probabilistic model capabilities into products that are reliable, measurable, and cost-effective. I like working across the whole stack — retrieval, agents, evals, and the serving infrastructure underneath.";
+  "I'm an AI/ML and software engineer who likes turning models into things people can actually use — LLM tooling, retrieval systems, and full-stack apps — with an eye for real-time performance, reliability, and clean engineering.";
 
 export type Experience = {
   org: string;
@@ -34,12 +33,13 @@ export const experiences: Experience[] = [
   {
     org: "Agnirath Aerolabs",
     role: "ML & Software Engineer Intern",
-    period: "Oct 2025 — Present",
+    period: "Oct 2025 — Jan 2026",
     points: [
-      "Improving the UI & UX of Femicam's desktop application built on React, Electron and Material UI.",
-      "Designing and building reusable React components for the application dashboard.",
+      "Architected and deployed a real-time Ground Control Station (GCS) for UAV monitoring and autonomous mission management, integrating telemetry pipelines with sub-second latency.",
+      "Built high-performance FastAPI backend services in Python to ingest, process, and relay drone flight data and command payloads across embedded UAV systems.",
+      "Developed responsive Next.js operator dashboards visualizing real-time drone telemetry — position, altitude, battery, and mission status — reducing operator response time significantly.",
     ],
-    tech: ["React", "Electron", "Material UI"],
+    tech: ["Python", "Django", "Computer Vision", "Transformers", "Next.js", "UAVs"],
   },
 ];
 
@@ -61,9 +61,14 @@ export const projects: Project[] = [
     name: "Open–Papertrade",
     featured: true,
     blurb:
-      "A paper-trading platform to practice trading strategies with real market data and zero financial risk.",
-    tech: ["React", "Chakra UI", "Express", "MongoDB", "Redis"],
-    link: { label: "GitHub", url: "https://github.com/mymadhavyadav07" },
+      "An AI-powered paper-trading platform to practice trading strategies with real market data and zero financial risk.",
+    points: [
+      "Engineered a full-stack paper-trading platform simulating real-world market conditions, letting users test algorithmic strategies risk-free before live deployment.",
+      "Built a robust REST API backend with Django for order management, portfolio tracking, and real-time market-data ingestion, supporting concurrent user sessions.",
+      "Designed for extensibility — the architecture supports future integration of ML-based trading-signal models and backtesting engines.",
+    ],
+    tech: ["Django", "Next.js", "TypeScript", "REST APIs"],
+    link: { label: "GitHub", url: "https://github.com/Open-Papertrade/Open-Papertrade" },
   },
   {
     name: "Github MCP Server",
@@ -71,25 +76,25 @@ export const projects: Project[] = [
       "A lightweight Model Context Protocol (MCP) server built with FastMCP to expose and automate GitHub operations using LLM-compatible tools.",
     points: [
       "Retrieve a GitHub user's bio.",
-      "Recursively fetch files & directories from a repo at any path.",
-      "Read file contents from a repository.",
-      "Create branches and open pull requests.",
-      "Open issues on a repository.",
+      "Recursively fetch all files and directories from a repo starting at any path.",
+      "Fetch the content of a file from a repository.",
+      "Create a new branch and then open a pull request on GitHub.",
+      "Open an issue on a GitHub repository.",
     ],
     tech: ["Python", "FastMCP", "GitHub API", "LLM Tools"],
-    link: { label: "GitHub", url: "https://github.com/mymadhavyadav07" },
+    link: { label: "GitHub", url: "https://github.com/mymadhavyadav07/Github-MCP-Server" },
   },
   {
     name: "Steganographic Encoder/Decoder",
     blurb:
-      "A Django web app to hide and retrieve secret messages inside images — a practical intro to steganography.",
+      "A Django web app that lets users hide and retrieve secret messages within images — a practical introduction to steganography.",
     points: [
       "Encode hidden messages into images.",
       "Decode secret messages from images.",
       "Friendly web interface built with Django.",
     ],
     tech: ["Python", "Django", "Pillow", "OpenCV"],
-    link: { label: "GitHub", url: "https://github.com/mymadhavyadav07" },
+    link: { label: "GitHub", url: "https://github.com/mymadhavyadav07/Steganographic-Encoder" },
   },
 ];
 
